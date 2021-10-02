@@ -1,22 +1,21 @@
-var nomeEvento, dataNasc, dataEvento, nomeParticipante, dataAtual, idade, 
+var nomeEvento, dataNasc, dataEvento, nomeParticipante, dataAtual, idade 
 
 //Dados Do Sistema
-l
-dataAtual = 2021
-let mesAtual = 10
+var data = new Date()
+ var dataAtual = (data.getFullYear()+ '-' (data.getMonth()+1)+ '-' + data.getDate()).replaceAll("/");
 //Dados so Usuario
-let usuario = window.prompt('Seja Bem vindo')
-for (var i=0; i< 10; i++){
-    nomeParticipante = window.prompt('Ola' " " + usuario);
-    dataNasc = window.prompt('ano de nascimento');
+let usuario = alert('Seja Bem vindo')
+    nomeParticipante = window.prompt('digite seu nome');
+    dataNasc = window.prompt('data de nascimento');
 
     //Processamento de dados 
- idade = dataAtual - dataNasc
- idade = dataAtual - dataNasc
-
+ var idade = dataAtual - dataNasc
+  console.log(dataAtual)
+  console.log(dataNasc)  
+   
  if (idade >18 ) {
      dataEvento = window.prompt('Digite a mes do evento')
-        if (dataEvento > mesAtual ) {
+        if (dataEvento > dataAtual ) {
            // entrada de dados
             nomeEvento = window.prompt('Digite um nome para seu evento: ');
             // saída de dados
@@ -26,4 +25,3 @@ for (var i=0; i< 10; i++){
         } 
     
     }
-}
